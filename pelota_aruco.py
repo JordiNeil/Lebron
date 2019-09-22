@@ -47,11 +47,13 @@ while True:
     plt.figure()
     print(ids)
     plt.imshow(frame_markers)
+    
     for i in range(len(ids)):
         c = corners[i][0]
         plt.plot([c[:, 0].mean()], [c[:, 1].mean()], "o", label = "id={0}".format(ids[i]))
     plt.legend()
     plt.show()
+    
     key = cv2.waitKey(1)
     if key == 27:
         break
